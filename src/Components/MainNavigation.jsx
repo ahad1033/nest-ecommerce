@@ -5,6 +5,15 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import Container from "./Container";
+import { GoHome } from "react-icons/go";
+import { CiShop } from "react-icons/ci";
+import { TbDiscountCheck } from "react-icons/tb";
+import { PiArticle } from "react-icons/pi";
+import { RiContactsLine } from "react-icons/ri";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { LiaUserCheckSolid } from "react-icons/lia";
+import { useState } from "react";
+
 // import { IoLocationOutline } from "react-icons/io5";
 // import { IoMdArrowDropdown } from "react-icons/io";
 
@@ -25,7 +34,7 @@ const DesktopNavigation = () => {
           <input
             type="text"
             placeholder="Search all category"
-            className="w-1/2 px-2 h-8"
+            className="w-1/2 px-2 h-8 outline-none"
           />
         </div>
         <IoSearch className="text-2xl" />
@@ -87,7 +96,7 @@ const TabletNavigation = () => {
               <input
                 type="text"
                 placeholder="Search all category"
-                className="w-1/2 px-2 h-8"
+                className="w-1/2 px-2 h-8 outline-none"
               />
             </div>
             <IoSearch className="text-2xl" />
@@ -99,6 +108,13 @@ const TabletNavigation = () => {
 };
 
 const MobileNavigation = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="lg:hidden md:hidden">
       <div className="navbar bg-base-100">
@@ -108,6 +124,7 @@ const MobileNavigation = () => {
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle"
+              onClick={toggleMenu}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,31 +143,55 @@ const MobileNavigation = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className={`menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-80 ${isMenuOpen ? 'block' : 'hidden'}`}
             >
-              <li>
-                <a>Home</a>
+              <div className="w-64 h-[50px] border mx-auto border-primary rounded-full flex items-center justify-between my-3">
+                <div className="relative w-full px-2 h-8">
+                  <IoSearch className="text-2xl absolute left-2 top-1/2 transform -translate-y-1/2" />
+                  <input
+                    type="text"
+                    placeholder="Search all category"
+                    className="pl-8 w-full h-full outline-none"
+                  />
+                </div>
+                <button className="btn bg-primary rounded-full text-white">
+                  Search
+                </button>
+              </div>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <GoHome className="text-xl" /> Home
+                </Link>
               </li>
-              <li>
-                <a>Shop</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <IoIosInformationCircleOutline className="text-xl" /> About
+                </Link>
               </li>
-              <li>
-                <a>Vendors</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <CiShop className="text-xl" /> Shop
+                </Link>
               </li>
-              <li>
-                <a>Mega Menu</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <LiaUserCheckSolid className="text-xl" /> Vendors
+                </Link>
               </li>
-              <li>
-                <a>Blog</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <TbDiscountCheck className="text-xl" /> Mega menu
+                </Link>
               </li>
-              <li>
-                <a>Pages</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <PiArticle className="text-xl" /> Blog
+                </Link>
               </li>
-              <li>
-                <a>Reviews</a>
-              </li>
-              <li>
-                <a>Brands</a>
+              <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+                <Link>
+                  <RiContactsLine className="text-xl" /> Contact
+                </Link>
               </li>
             </ul>
           </div>
