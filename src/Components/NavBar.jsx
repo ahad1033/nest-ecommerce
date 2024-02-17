@@ -1,11 +1,13 @@
+import BottomNavigation from "./BottomNavigation";
 import MainNavigation from "./MainNavigation";
 import TopNavigation from "./TopNavigation";
 
 const NavBar = () => {
   return (
     <>
-      <TopNavigation className="hidden sm:block" />
+      <TopNavigation />
       <MainNavigation />
+      <BottomNavigation />
     </>
   );
 };

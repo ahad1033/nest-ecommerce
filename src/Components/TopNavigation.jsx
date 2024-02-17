@@ -5,7 +5,7 @@ const TopNavigation = () => {
   return (
     <>
       <Container>
-        <nav className="flex justify-between items-center h-9">
+        <nav className="hidden lg:flex justify-between items-center h-9">
           <div className="hidden md:block">
             <ul className="flex flex-row px-1">
               <li className="btn btn-ghost btn-sm text-sm mx-1">

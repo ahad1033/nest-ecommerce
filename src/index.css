@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import '@headlessui/react/styles.css'; */
 
 .btn-link {
   color: black;
