@@ -4,7 +4,7 @@ import TopNavigation from "./TopNavigation";
 const NavBar = () => {
   return (
     <>
-      <TopNavigation className="hidden sm:block" />
+      <TopNavigation className="hidden  sm:block" />
       <MainNavigation />
     </>
   );
