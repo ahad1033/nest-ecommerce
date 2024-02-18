@@ -6,9 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ['Quicksand', 'sans-serif'],
+        secondary: ['Lato', 'sans-serif'],
+      },
       colors: {
         primary: "#3BB77E",
-        secondary: "#7e7e7e"
+        secondary: "#7e7e7e",
+        tertiary: "#253D4E"
       }
     },
   },

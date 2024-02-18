@@ -34,7 +34,7 @@ const DesktopNavigation = () => {
           <input
             type="text"
             placeholder="Search all category"
-            className="w-1/2 px-2 h-8 outline-none"
+            className="w-1/2 px-2 h-8 outline-none bg-transparent"
           />
         </div>
         <IoSearch className="text-2xl" />
@@ -96,7 +96,7 @@ const TabletNavigation = () => {
               <input
                 type="text"
                 placeholder="Search all category"
-                className="w-1/2 px-2 h-8 outline-none"
+                className="w-1/2 px-2 h-8 outline-none bg-transparent"
               />
             </div>
             <IoSearch className="text-2xl" />
@@ -108,7 +108,6 @@ const TabletNavigation = () => {
 };
 
 const MobileNavigation = () => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -143,7 +142,9 @@ const MobileNavigation = () => {
             </div>
             <ul
               tabIndex={0}
-              className={`menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-80 ${isMenuOpen ? 'block' : 'hidden'}`}
+              className={`menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-80 ${
+                isMenuOpen ? "block" : "hidden"
+              }`}
             >
               <div className="w-64 h-[50px] border mx-auto border-primary rounded-full flex items-center justify-between my-3">
                 <div className="relative w-full px-2 h-8">
@@ -151,10 +152,10 @@ const MobileNavigation = () => {
                   <input
                     type="text"
                     placeholder="Search all category"
-                    className="pl-8 w-full h-full outline-none"
+                    className="pl-8 w-full h-full outline-none bg-transparent"
                   />
                 </div>
-                <button className="btn bg-primary rounded-full text-white">
+                <button className="btn bg-primary rounded-full text-white border-none">
                   Search
                 </button>
               </div>
@@ -218,13 +219,12 @@ const MainNavigation = () => {
       <Container>
         {/* ---------- desktop view ---------- */}
         <DesktopNavigation />
-        <hr />
         {/* ---------- tablet view ---------- */}
         <TabletNavigation />
-        <hr />
         {/* ---------- mobile view ---------- */}
         <MobileNavigation />
       </Container>
+      <hr />
     </>
   );
 };

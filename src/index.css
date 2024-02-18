@@ -6,19 +6,38 @@
 .btn-link {
   color: black;
   text-decoration: none !important;
-  font-size: 18px;
+  font-size: 14px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: center;
 }
 
 .icon {
   margin-bottom: 5px;
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
 }
 
 .mobile-logo {
   height: 35px;
+}
+
+.home-banner {
+  background-image: url("/public/banner-image.png");
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-banner {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-banner {
+    height: 350px;
+  }
 }

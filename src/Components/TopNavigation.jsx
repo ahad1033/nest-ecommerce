@@ -66,8 +66,8 @@ const TopNavigation = () => {
             </ul>
           </div>
         </nav>
-        <hr />
       </Container>
+      <hr />
     </>
   );
 };

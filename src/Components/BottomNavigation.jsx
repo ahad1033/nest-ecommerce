@@ -20,14 +20,15 @@ const BottomNavigation = () => {
           <div className="hidden lg:flex items-center">
             <TfiHeadphoneAlt className="text-3xl mr-3" />
             <div className="flex flex-col items-center justify-center">
-              <h2 className="text-primary text-2xl font-bold">
+              <h2 className="text-primary text-2xl font-primary font-bold">
                 +1800 333 666
               </h2>
-              <p className="text-secondary">24/7 Support Center</p>
+              <p className="text-secondary font-secondary">24/7 Support Center</p>
             </div>
           </div>
         </div>
       </Container>
+      <hr />
     </>
   );
 };
