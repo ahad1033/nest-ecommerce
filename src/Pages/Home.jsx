@@ -1,6 +1,7 @@
 import Container from "../Components/Container";
 import HomeBanner from "../Components/HomeBanner";
 import LeftCategory from "../Components/LeftCategory";
+import PopularProducts from "../Components/PopularProducts";
 
 const Home = () => {
   return (
@@ -10,8 +11,9 @@ const Home = () => {
           <div className="col-span-12 lg:col-span-3 mb-4 lg:mb-0 hidden lg:block">
             <LeftCategory />
           </div>
-          <div className="col-span-12 lg:col-span-9">
+          <div className="col-span-12 lg:col-span-9 px-2 lg:px-0">
             <HomeBanner />
+            <PopularProducts />
           </div>
         </div>
       </Container>
