@@ -1,3 +1,4 @@
+import BestSells from "../Components/BestSells";
 import Container from "../Components/Container";
 import HomeBanner from "../Components/HomeBanner";
 import LeftCategory from "../Components/LeftCategory";
@@ -14,6 +15,7 @@ const Home = () => {
           <div className="col-span-12 lg:col-span-9 px-2 lg:px-0">
             <HomeBanner />
             <PopularProducts />
+            <BestSells />
           </div>
         </div>
       </Container>
