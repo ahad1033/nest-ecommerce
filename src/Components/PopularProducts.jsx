@@ -1,31 +1,21 @@
-import { useState } from 'react';
-
-const productData = {
-    All: [
-      'Product 1',
-      'Product 2',
-      'Product 3',
-      'Product 4',
-      'Product 5',
-      'Product 6',
-      'Product 7',
-      'Product 8',
-      'Product 9',
-      'Product 10',
-    ],
-    'Milk & Dairies': ['Milk Product 1', 'Milk Product 2', 'Milk Product 3'],
-    'Coffees & Teas': ['Coffee Product 1', 'Coffee Product 2', 'Coffee Product 3'],
-    'Pet Foods': ['Pet Food 1', 'Pet Food 2', 'Pet Food 3'],
-    Meats: ['Meat Product 1', 'Meat Product 2', 'Meat Product 3'],
-    Vegetables: ['Vegetable 1', 'Vegetable 2', 'Vegetable 3'],
-    Fruits: ['Fruit 1', 'Fruit 2', 'Fruit 3'],
-  };
+import  { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAsyncAllProducts } from '../redux/features/AllCategory/AllCategorySlice';
+import { IoCartSharp } from "react-icons/io5";
 
 const PopularProducts = () => {
-  const [activeTab, setActiveTab] = useState('All');
+  const dispatch = useDispatch();
+  const [activeTab, setActiveTab] = useState('all');
+
+  useEffect(() => {
+    dispatch(getAsyncAllProducts());
+  }, [dispatch]);
+
+  const popularProducts = useSelector((state) => state.Categories.categories);
+  // console.log("products---", popularProducts);
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab);
+    setActiveTab(tab.toLowerCase());
   };
 
   const renderTabs = () => {
@@ -38,7 +28,9 @@ const PopularProducts = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`px-2 py-2 text-sm lg:text-base font-primary font-semibold ${activeTab === tab ? 'text-primary' : 'text-tertiary'}`}
+              className={`px-2 py-2 text-sm lg:text-base font-primary font-semibold ${
+                activeTab === tab.toLowerCase() ? 'text-primary' : 'text-tertiary'
+              }`}
               onClick={() => handleTabClick(tab)}
             >
               {tab}
@@ -50,13 +42,27 @@ const PopularProducts = () => {
   };
 
   const renderProductCards = () => {
-    const products = productData[activeTab] || [];
+    const products =
+      activeTab === 'all'
+        ? popularProducts
+        : popularProducts.filter((product) => product.category.toLowerCase() === activeTab);
+
+    if (products.length === 0) {
+      return <p>No products available for the selected category.</p>;
+    }
 
     return (
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        {products.map((product, index) => (
-          <div key={index} className="p-4 border rounded bg-white">
-            {product}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <div key={product._id} className="pb-3 lg:pb-7 px-2 lg:px-7 border rounded-xl bg-white">
+            <img src={product.img} alt={product.name} className="mb-1 mt-0 lg:mt-2 mx-auto w-full" />
+            <p className='text-sm font-secondary text-secondary my-3'>{product.category}</p>
+            <h3 className="text- font-bold my-1 font-primary text-tertiary">{product.name}</h3>
+            <p className='text-sm text-secondary font-secondary'>By <span className='text-sm text-primary'>{product.seller}</span></p>
+            <div className='flex justify-between items-center mt-3 lg:mt-5'>
+              <p className="text-primary font-primary font-bold">$ {product.price}</p>
+              <button className='btn btn-sm bg-primary bg-opacity-20 text-primary font-primary border-0'><IoCartSharp /> Add</button>
+            </div>
           </div>
         ))}
       </div>

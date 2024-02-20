@@ -3,6 +3,11 @@
 @tailwind utilities;
 /* @import '@headlessui/react/styles.css'; */
 
+body {
+  background-color: white;
+  color: black;
+}
+
 .btn-link {
   color: black;
   text-decoration: none !important;
