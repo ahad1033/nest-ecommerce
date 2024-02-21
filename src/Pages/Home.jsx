@@ -1,5 +1,6 @@
 import BestSells from "../Components/BestSells";
 import Container from "../Components/Container";
+import DealsOfTheDays from "../Components/DealsOfTheDays";
 import HomeBanner from "../Components/HomeBanner";
 import LeftCategory from "../Components/LeftCategory";
 import PopularProducts from "../Components/PopularProducts";
@@ -16,6 +17,7 @@ const Home = () => {
             <HomeBanner />
             <PopularProducts />
             <BestSells />
+            <DealsOfTheDays />
           </div>
         </div>
       </Container>

@@ -10,7 +10,7 @@ const BottomNavigation = () => {
       <Container>
         <div className="h-20 hidden sm:flex items-center justify-between">
           <div className="hidden sm:flex flex-row md:justify-between items-center">
-            <button className="btn bg-primary text-white mr-4">
+            <button className="btn bg-primary text-white mr-4 border-0">
               <TbCategory />
               Browse All Categories
               <TiArrowSortedDown />

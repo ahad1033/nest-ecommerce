@@ -56,8 +56,8 @@ const PopularProducts = () => {
         {products.map((product) => (
           <div key={product._id} className="pb-3 lg:pb-7 px-2 lg:px-7 border rounded-xl bg-white">
             <img src={product.img} alt={product.name} className="mb-1 mt-0 lg:mt-2 mx-auto w-full" />
-            <p className='text-sm font-secondary text-secondary my-3'>{product.category}</p>
-            <h3 className="text- font-bold my-1 font-primary text-tertiary">{product.name}</h3>
+            <p className='text-sm font-secondary text-secondary my-2'>{product.category}</p>
+            <h3 className="text-lg font-bold my-1 font-primary text-tertiary">{product.name}</h3>
             <p className='text-sm text-secondary font-secondary'>By <span className='text-sm text-primary'>{product.seller}</span></p>
             <div className='flex justify-between items-center mt-3 lg:mt-5'>
               <p className="text-primary font-primary font-bold">$ {product.price}</p>
