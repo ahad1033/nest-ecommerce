@@ -12,7 +12,6 @@ const DealsOfTheDays = () => {
   }, [dispatch]);
 
   const bestDeal = useSelector((state) => state.BestDeals.deals);
-
   // console.log("bestDeal", bestDeal);
 
   const handleShowAllDeals = () => {
@@ -42,8 +41,8 @@ const DealsOfTheDays = () => {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
-          {bestDeal?.map((p) => {
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-4">
+          {bestDeal?.slice(0, 3).map((p) => {
             const discountedPrice = p.price - p.price * (p.discount / 100);
             return (
               <div
