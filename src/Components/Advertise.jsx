@@ -25,11 +25,11 @@ const Advertise = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="w-">
+          <div className="w-2/3 lg:w-full ps-2">
             <p className="text-2xl font-primary text-tertiary font-bold">
               {i.title}
             </p>
-            <button className="btn bg-primary text-white border-none mt-3">Shop Now <FiArrowRight /></button>
+            <button className="btn btn-sm lg:btn-sm bg-primary text-white border-none mt-3">Shop Now <FiArrowRight /></button>
           </div>
         </div>
       ))}
