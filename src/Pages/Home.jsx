@@ -1,3 +1,4 @@
+import Advertise from "../Components/Advertise";
 import BestSells from "../Components/BestSells";
 import Container from "../Components/Container";
 import DealsOfTheDays from "../Components/DealsOfTheDays";
@@ -18,6 +19,7 @@ const Home = () => {
             <PopularProducts />
             <BestSells />
             <DealsOfTheDays />
+            <Advertise />
           </div>
         </div>
       </Container>
