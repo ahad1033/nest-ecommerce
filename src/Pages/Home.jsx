@@ -5,6 +5,7 @@ import DealsOfTheDays from "../Components/DealsOfTheDays";
 import HomeBanner from "../Components/HomeBanner";
 import LeftCategory from "../Components/LeftCategory";
 import PopularProducts from "../Components/PopularProducts";
+import Subscribe from "../Components/Subscribe";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
             <Advertise />
           </div>
         </div>
+        <Subscribe />
       </Container>
     </>
   );
