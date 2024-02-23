@@ -1,12 +1,11 @@
-import Container from "./Container";
+import MainFooter from "./MainFooter";
 import TopFooter from "./TopFooter";
 
 const Footer = () => {
   return (
     <>
-      <Container>
         <TopFooter />
-      </Container>
+        <MainFooter />
     </>
   );
 };

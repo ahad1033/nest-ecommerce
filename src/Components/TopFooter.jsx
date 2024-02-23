@@ -1,6 +1,9 @@
+import Container from "./Container";
+
 const TopFooter = () => {
   return (
     <>
+    <Container>
       <footer className="p-4 mt-11">
         <div className="grid grid-cols-3 gap-6 lg:gap-4 lg:grid-cols-6">
           {/* First column */}
@@ -15,7 +18,6 @@ const TopFooter = () => {
             <p className="text-black font-secondary text-sm mb-4">Hours: 10:00 - 18:00, Mon - Sat</p>
           </div>
 
-          {/* Middle four columns */}
           <div className="col-span-1">
             <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Company</h1>
             <p className="text-black  font-secondary text-sm mb-4">About Us</p>
@@ -26,6 +28,7 @@ const TopFooter = () => {
             <p className="text-black  font-secondary text-sm mb-4">Support Center</p>
             <p className="text-black  font-secondary text-sm mb-4">Careers</p>
           </div>
+
           <div className="col-span-1">
             <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Account</h1>
             <p className="text-black  font-secondary text-sm mb-4">Sign In</p>
@@ -36,6 +39,7 @@ const TopFooter = () => {
             <p className="text-black  font-secondary text-sm mb-4">Shipping Details</p>
             <p className="text-black  font-secondary text-sm mb-4">Compare Products</p>
           </div>
+
           <div className="col-span-1">
             <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Corporate</h1>
             <p className="text-black  font-secondary text-sm mb-4">Become a Vendor</p>
@@ -46,16 +50,7 @@ const TopFooter = () => {
             <p className="text-black  font-secondary text-sm mb-4">Promotions</p>
             <p className="text-black  font-secondary text-sm mb-4">Careers</p>
           </div>
-          <div className="col-span-1">
-            <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Popular</h1>
-            <p className="text-black  font-secondary text-sm mb-4">Milk & Flavoured Milk</p>
-            <p className="text-black  font-secondary text-sm mb-4">Butter & Margarine</p>
-            <p className="text-black  font-secondary text-sm mb-4">Eggs Substitutes</p>
-            <p className="text-black  font-secondary text-sm mb-4">Marmalades</p>
-            <p className="text-black  font-secondary text-sm mb-4">Sour Cream and Dips</p>
-            <p className="text-black  font-secondary text-sm mb-4">Tea & Kombucha</p>
-            <p className="text-black  font-secondary text-sm mb-4">Cheese</p>
-          </div>
+
           <div className="col-span-1">
             <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Popular</h1>
             <p className="text-black  font-secondary text-sm mb-4">Milk & Flavoured Milk</p>
@@ -67,9 +62,16 @@ const TopFooter = () => {
             <p className="text-black  font-secondary text-sm mb-4">Cheese</p>
           </div>
 
+          <div className="col-span-1">
+            <h1 className="text-tertiary text-2xl mb-5 font-primary font-bold">Install App</h1>
+              
+            <p className="text-black  font-secondary text-sm mb-4">Secured Payment Gateways</p>
+          </div>
+
           
         </div>
       </footer>
+      </Container>
     </>
   );
 };
