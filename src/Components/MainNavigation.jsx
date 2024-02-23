@@ -20,8 +20,9 @@ import { useState } from "react";
 const DesktopNavigation = () => {
   return (
     <div className="hidden lg:flex flex-row my-8 items-center justify-between space-x-4">
-      <img id="logo" src="/Header.png" alt="logo" />
-
+      <Link to="/">
+        <img id="logo" src="/Header.png" alt="logo" />
+      </Link>
       <div
         id="search"
         className="w-[600px] h-[50px] border border-primary rounded-lg flex items-center justify-between px-4"
@@ -81,7 +82,9 @@ const TabletNavigation = () => {
     <div className="hidden lg:hidden md:block sm:hidden">
       <div className="navbar">
         <div className="navbar-start">
-          <img src="/Header.png" alt="logo" />
+          <Link to="/">
+            <img src="/Header.png" alt="logo" />
+          </Link>
         </div>
         <div className="navbar-end">
           <div
@@ -198,7 +201,9 @@ const MobileNavigation = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <img className="mobile-logo" src="/Header.png" alt="logo" />
+          <Link to="/">
+            <img className="mobile-logo" src="/Header.png" alt="logo" />
+          </Link>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">

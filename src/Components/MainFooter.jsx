@@ -5,7 +5,6 @@ import {
   FaInstagram,
   FaPinterestP,
 } from "react-icons/fa";
-
 import Container from "./Container";
 
 const MainFooter = () => {

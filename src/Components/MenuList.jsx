@@ -4,14 +4,14 @@ import { AiOutlineFire } from "react-icons/ai";
 const MenuList = () => {
   return (
     <div>
-      <ul className="flex flex-row">
+      <ul className="flex flex-row items-center">
         <li className="mx-2 font-semibold text-base hover:text-primary">
           <Link className="flex items-center">
             <AiOutlineFire className="mr-1 text-lg" /> Deals
           </Link>
         </li>
         <li className="mx-2 font-semibold text-base sm:text-sm hover:text-primary">
-          <Link>Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li className="mx-2 font-semibold text-base sm:text-sm hover:text-primary">
           <Link>About</Link>
