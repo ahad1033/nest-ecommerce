@@ -5,9 +5,9 @@ import AdvertiseReducer from "./features/Advertise/AdvertiseSlice";
 
 const store = configureStore({
   reducer: {
-    Categories: CategoryReducer,
-    BestDeals: BestDealReducer,
     Advertise: AdvertiseReducer,
+    BestDeals: BestDealReducer,
+    Categories: CategoryReducer,
   },
 });
 
