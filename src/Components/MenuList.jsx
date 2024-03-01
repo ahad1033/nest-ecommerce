@@ -5,16 +5,16 @@ const MenuList = () => {
   return (
     <div>
       <ul className="flex flex-row items-center">
-        <li className="mx-2 font-semibold text-base hover:text-primary">
+        <li className="mx-2 font-bold text-base hover:text-primary">
           <Link className="flex items-center">
-            <AiOutlineFire className="mr-1 text-lg" /> Deals
+            <AiOutlineFire className="mr-1 text-2xl" /> Deals
           </Link>
         </li>
         <li className="mx-2 font-semibold text-base sm:text-sm hover:text-primary">
           <Link to="/">Home</Link>
         </li>
         <li className="mx-2 font-semibold text-base sm:text-sm hover:text-primary">
-          <Link>About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li className="mx-2 font-semibold text-base sm:text-sm hover:text-primary">
           <Link>Shop</Link>

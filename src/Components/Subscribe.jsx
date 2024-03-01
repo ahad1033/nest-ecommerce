@@ -2,7 +2,7 @@ import { FiSend } from "react-icons/fi";
 
 const Subscribe = () => {
   return (
-    <div className="relative flex items-center bg-primary bg-opacity-20 rounded-2xl h-[420px] md:h-[320px] w-full mt-11 mb-6">
+    <div className="relative flex items-center  bg-primary bg-opacity-20 rounded-2xl h-[420px] md:h-[320px] w-full mt-11 mb-6">
       <div className="ps-5 lg:ps-16 w-full md:w-3/5 lg:w-1/2">
         <h1 className="font-primary font-bold text-3xl lg:text-4xl leading-10 text-tertiary mb-5">
           Stay home & get your daily needs from our shop
