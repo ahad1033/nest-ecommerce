@@ -1,6 +1,6 @@
 const AboutBanner = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-5 mt-14 mb-11">
+    <div className="flex flex-col lg:flex-row items-center gap-5 mt-5 lg:mt-14 mb-11">
       <div className="w-full lg:w-1/2">
         <img src="/blogHeader.webp" alt="" />
       </div>
